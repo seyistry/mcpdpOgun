@@ -90,7 +90,11 @@
         </nav>
         <div class="others-hero" id="registration-bg">
             <div class="container">
-                <h2 class="text-right" id="orders-h2">Registration</h2>
+                <h2 class="text-right" id="orders-h2"><span
+                    class="txt-type"
+                    data-wait="3000"
+                    data-words='["Registration"]'
+                ></span></h2>
             </div>
             <!-- <img class="img-fluid" src="img/bg_1.jpg" alt="" style="max-height: 600px; width: 100%; background-position: center;" /> -->
         </div>
@@ -102,17 +106,6 @@
                 register for a program once.
             </h6>
             <form style="max-width: 600px;">
-                <div>
-                    <label class="reg-form" for="OgunVerificationCode"
-                        >Ogun Verify Nurse code:</label
-                    >
-                    <input
-                        type="text"
-                        class="form-control form-control-sm"
-                        id=""
-                    />
-                </div>
-
                 <label class="reg-form" for="Teller">Teller #:</label>
                 <input
                     type="text"
@@ -236,7 +229,7 @@
                 <input type="date" class="form-control form-control-sm" id="" />
                 <button
                     type="submit"
-                    class="btn btn-primary "
+                    class="btn-submit"
                     style="margin-top: 1rem; margin-bottom: 2.5rem;"
                 >
                     Submit
@@ -299,12 +292,9 @@
                             document.write(new Date().getFullYear());
                         </script>
                         All right reserved. | Developed by
-                        <span
-                            data-toggle="tooltip"
-                            data-placement="top"
-                            title="07034490363"
+                        <a class="link-primary" href="07034490363"
                             >Seyi Alexander.
-                        </span>
+                        </a>
                     </small>
                 </div>
             </div>
@@ -315,5 +305,6 @@
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.js"></script>
+        <script src="js/typewriter.js"></script>
     </body>
 </html>

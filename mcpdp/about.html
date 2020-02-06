@@ -90,7 +90,13 @@
         <div class="others-hero" id="about-bg">
             <!-- <img class="img-fluid" src="img/bg_1.jpg" alt="" style="max-height: 600px; width: 100%; background-position: center;" /> -->
             <div class="container">
-                <h2 class="text-right" id="orders-h2">About Us</h2>
+                <h2 class="text-right" id="orders-h2">
+                    <span
+                    class="txt-type"
+                    data-wait="3000"
+                    data-words='["About Us"]'
+                ></span>
+                </h2>
             </div>
         </div>
         <section class="container">
@@ -371,12 +377,9 @@
                             document.write(new Date().getFullYear());
                         </script>
                         All right reserved. | Developed by
-                        <span
-                            data-toggle="tooltip"
-                            data-placement="top"
-                            title="07034490363"
+                        <a class="link-primary" href="07034490363"
                             >Seyi Alexander.
-                        </span>
+                        </a>
                     </small>
                 </div>
             </div>
@@ -387,5 +390,6 @@
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.js"></script>
+        <script src="js/typewriter.js"></script>
     </body>
 </html>

@@ -84,7 +84,13 @@
         </nav>
         <div class="others-hero" id="contact-bg">
             <div class="container">
-                <h2 class="text-right" id="orders-h2">Contact</h2>
+                <h2 class="text-right" id="orders-h2">
+                    <span
+                        class="txt-type"
+                        data-wait="3000"
+                        data-words='["Contact"]'
+                    ></span>
+                </h2>
             </div>
             <!-- <img class="img-fluid" src="img/bg_1.jpg" alt="" style="max-height: 600px; width: 100%; background-position: center;" /> -->
         </div>
@@ -94,25 +100,17 @@
                 <div class="col-md-3 d-flex">
                     <div class="info p-4">
                         <p>
-                            <span>Address:</span> 198 West 21th Street, Suite
-                            721 New York NY 10016
+                            <b>Address:</b> Department of Nursing Services,
+                            Ministry of Health, Oke-Mosan, Abeokuta
                         </p>
                     </div>
                 </div>
                 <div class="col-md-3 d-flex">
                     <div class="info bg-white p-4">
                         <p>
-                            <span>Phone:</span>
-                            <a href="tel://1234567920" class="link-primary">+ 1235 2355 98</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-3 d-flex">
-                    <div class="info bg-white p-4">
-                        <p>
-                            <span>Email:</span>
-                            <a href="mailto:info@yoursite.com"
-                                class="link-primary">info@yoursite.com</a
+                            <b>Phone:</b>
+                            <a href="tel://1234567920" class="link-primary"
+                                >+ 1235 2355 98</a
                             >
                         </p>
                     </div>
@@ -120,13 +118,27 @@
                 <div class="col-md-3 d-flex">
                     <div class="info bg-white p-4">
                         <p>
-                            <span>Website</span>
-                            <a href="./index.html" class="link-primary">yoursite.com</a>
+                            <b>Email:</b>
+                            <a
+                                href="mailto:info@yoursite.com"
+                                class="link-primary"
+                                >info@yoursite.com</a
+                            >
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 d-flex">
+                    <div class="info bg-white p-4">
+                        <p>
+                            <b>Website</b>
+                            <a href="./index.html" class="link-primary"
+                                >yoursite.com</a
+                            >
                         </p>
                     </div>
                 </div>
             </div>
-            <hr>
+            <hr />
             <div class="row">
                 <div class="col-md-6 order-md-last">
                     <form action="#" class="">
@@ -162,11 +174,9 @@
                             ></textarea>
                         </div>
                         <div class="form-group">
-                            <input
-                                type="submit"
-                                value="Send Message"
-                                class="btn btn-primary py-3 px-5"
-                            />
+                            <button type="submit" class="btn-submit">
+                                Submit
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -233,12 +243,9 @@
                             document.write(new Date().getFullYear());
                         </script>
                         All right reserved. | Developed by
-                        <span
-                            data-toggle="tooltip"
-                            data-placement="top"
-                            title="07034490363"
+                        <a class="link-primary" href="07034490363"
                             >Seyi Alexander.
-                        </span>
+                        </a>
                     </small>
                 </div>
             </div>
@@ -249,5 +256,6 @@
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.js"></script>
+        <script src="js/typewriter.js"></script>
     </body>
 </html>
