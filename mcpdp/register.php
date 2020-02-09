@@ -35,6 +35,12 @@ if (isset($_POST["submit"])) {
         $db->exec($sql);
         
         $database->closeConnection();
+
+        include_once "printAfterReg.php";
+        $printAfterReg= new printAfterReg();
+        $printAfterReg::fetchAndPrint($email);
+        return;
+
         return print("You have registered successfully.");
     } else {
         return print("Email already in use.");
