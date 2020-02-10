@@ -17,6 +17,12 @@ body {
         "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+#logo {
+    color: #12836c;
+    font-weight: bolder;
+    font-size: larger;
+}
+
 #hr-top {
     padding: 0;
     margin: 0;

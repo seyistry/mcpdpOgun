@@ -16,7 +16,6 @@ if (isset($_POST["submit"])) {
     $teller_no = $_POST['teller_no'];
     $title = $_POST['title'];
 
-
     $database = new connect();
     
     $db = $database->openConnection();
