@@ -23,6 +23,19 @@ body {
     font-size: larger;
 }
 
+#link-a {
+    text-decoration: none;
+    background-color: #12836c;
+    padding: 15px 32px;
+    color: #fff;
+  }
+
+#link-a:hover {
+    text-decoration: none;
+    background-color: #fff;
+    padding: 15px 32px;
+    color: #12836c;
+  }
 
 #hr-top {
     padding: 0;
