@@ -113,11 +113,16 @@
                     type="text"
                     class="form-control form-control-sm "
                     name="teller_no"
+                    id="teller"
                 />
                 <div class="form-group">
                     <div class="form-group">
                         <label class="reg-form" for="program">Programme</label>
-                        <select class="form-control form-control-sm" name="program">
+                        <select
+                            class="form-control form-control-sm"
+                            name="program"
+                            id="program"
+                        >
                             <option value=""></option>
                             <option value="159"
                                 >February 17-21 Abeokuta - (EMONC), (RMC) and
@@ -136,7 +141,8 @@
                                 Services</option
                             >
                             <option value="163"
-                                >June 15 – 19 Abeokuta - Med-Surg 1/ (SCL)</option
+                                >June 15 – 19 Abeokuta - Med-Surg 1/
+                                (SCL)</option
                             >
                             <option value="165"
                                 >July 20 – 24 Abeokuta - Midwifery 1/ Maternal
@@ -166,7 +172,11 @@
                 <div class="form-group">
                     <div class="form-group">
                         <label class="reg-form" for="title">Title:</label>
-                        <select class="form-control form-control-sm" name="title" id="title">
+                        <select
+                            class="form-control form-control-sm"
+                            name="title"
+                            id="title"
+                        >
                             <option value=""></option>
                             <option value="Mr">Mr</option>
                             <option value="Mrs">Mrs</option>
@@ -179,7 +189,7 @@
                 <input
                     type="text"
                     class="form-control form-control-sm"
-                    id="testjs" onchange="myFunction()"
+                    id="fullName"
                     name="fullname"
                     placeholder="Surname          Othernames"
                 />
@@ -188,7 +198,11 @@
                         <label class="reg-form" for="marital"
                             >Marital Status:</label
                         >
-                        <select class="form-control form-control-sm" name="marital_status" id="">
+                        <select
+                            class="form-control form-control-sm"
+                            name="marital_status"
+                            id="status"
+                        >
                             <option> </option>
                             <option>Single</option>
                             <option>Married</option>
@@ -198,7 +212,11 @@
                 <div class="form-group">
                     <div class="form-group">
                         <label class="reg-form" for="sex">Sex:</label>
-                        <select class="form-control form-control-sm" name="sex" id="">
+                        <select
+                            class="form-control form-control-sm"
+                            name="sex"
+                            id="sex"
+                        >
                             <option> </option>
                             <option>Male</option>
                             <option>Female</option>
@@ -208,16 +226,31 @@
                 <label class="reg-form" for="pow"
                     >Hospital (Place of Work):</label
                 >
-                <input type="text" class="form-control form-control-sm" name="hospital" id="" />
+                <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    name="hospital"
+                    id="pow"
+                />
                 <label class="reg-form" for="specialty">Speciality:</label>
-                <input type="text" class="form-control form-control-sm" name="speciality" id="" />
+                <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    name="speciality"
+                    id="speciality"
+                />
                 <label class="reg-form" for="Tel">Mobile No:</label>
-                <input type="tel" class="form-control form-control-sm" name="mobile_no" id="" />
+                <input
+                    type="tel"
+                    class="form-control form-control-sm"
+                    name="mobile_no"
+                    id="phone"
+                />
                 <label class="reg-form" for="email">Email address</label>
                 <input
                     type="email"
                     class="form-control form-control-sm"
-                    id=""
+                    id="email"
                     name="email"
                     aria-describedby="emailHelp"
                     placeholder="Enter email"
@@ -228,13 +261,30 @@
                 <label class="reg-form" for="license"
                     >Practising License No:</label
                 >
-                <input type="text" class="form-control form-control-sm" name="practice_licence" id="" />
+                <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    name="practice_license"
+                    id="license"
+                />
                 <label class="reg-form" for="expire-date">Expiring Date:</label>
-                <input type="date" class="form-control form-control-sm" id="" name="exp_date" />
-                <button type="submit" class="btn-submit" style="margin-top: 1rem; margin-bottom: 2.5rem;" name="submit">
+                <input
+                    type="date"
+                    class="form-control form-control-sm"
+                    id="exp"
+                    name="exp_date"
+                />
+                <button
+                    type="submit"
+                    class="btn-submit"
+                    id="submit"
+                    style="margin-top: 1rem; margin-bottom: 2.5rem;"
+                    name="submit"
+                >
                     Submit
                 </button>
             </form>
+            <div class="alert alert-danger" id="error" role="alert"></div>
         </div>
         <footer>
             <div class="container">
@@ -306,11 +356,6 @@
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.js"></script>
         <script src="js/typewriter.js"></script>
+        <script src="./js/main.js"></script>
     </body>
-
-    <script>
-     function myFunction(){
-         alert('You changed me');
-     }
-    </script>
 </html>
