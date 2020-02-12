@@ -17,6 +17,14 @@ body {
         "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    color: aquamarine;
+}
+
 #logo {
     color: #12836c;
     font-weight: bolder;
@@ -24,7 +32,6 @@ body {
 }
 
 #link-a {
-    text-decoration: none;
     background-color: #12836c;
     padding: 15px 32px;
     color: #fff;
