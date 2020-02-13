@@ -15,12 +15,13 @@ if (isset($_POST["submit"])) {
     $speciality = $_POST['speciality'];
     $teller_no = $_POST['teller_no'];
     $title = $_POST['title'];
+    $date = date("d M Y");
 
     $database = new connect();
     
     $db = $database->openConnection();
-    $sql_check = "select email, exp_date, fullname, hospital, marital_status, mobile_no, practice_licence, program, sex, speciality, teller_no, title
-                 from register where email='$email'";
+    $sql_check = "select email, exp_date, fullname, hospital, marital_status, mobile_no, practice_licence, program, sex, speciality, teller_no, title, reg_time
+                 from $program where email='$email'";
     
     $record = $db->query($sql_check);
     $result = $record->fetchAll();
@@ -28,8 +29,8 @@ if (isset($_POST["submit"])) {
     // return print(json_encode($result));
 
     if (empty($result)) {
-        $sql = "insert into `register` (email, exp_date, fullname, hospital, marital_status, mobile_no, practice_licence, program, sex, speciality, teller_no, title)
-             values('$email','$exp_date','$fullname','$hospital','$marital_status','$mobile_no','$practice_licence','$program','$sex','$speciality','$teller_no','$title')";
+        $sql = "insert into $program (email, exp_date, fullname, hospital, marital_status, mobile_no, practice_licence, program, sex, speciality, teller_no, title, reg_time)
+             values('$email','$exp_date','$fullname','$hospital','$marital_status','$mobile_no','$practice_licence','$program','$sex','$speciality','$teller_no','$title','$date')";
         
         $db->exec($sql);
         

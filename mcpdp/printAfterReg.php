@@ -9,7 +9,7 @@ class printAfterReg{
 
             $db = $database->openConnection();
             $sql_check = "select email, exp_date, fullname, hospital, marital_status, mobile_no, practice_licence, program, sex, speciality, teller_no, title
-                        from register where email='$email'";
+                        from $program where email='$email'";
 
             $record = $db->query($sql_check);
             $result = $record->fetchAll();

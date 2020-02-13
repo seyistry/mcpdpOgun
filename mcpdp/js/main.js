@@ -48,7 +48,7 @@ $("form").submit(function(e){
         error += "<br>The email field is required.";
     }
 
-    if ($("#license").val() == "") {
+    if ($("#licence").val() == "") {
         error += "<br>The license field is required.";
     }
 
