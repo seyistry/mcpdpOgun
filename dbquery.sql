@@ -37,5 +37,6 @@ CREATE TABLE IF NOT EXISTS `register` (
   `sex` varchar(8) NOT NULL,
   `speciality` varchar(150) NOT NULL,
   `teller_no` varchar(100) NOT NULL,
-  `title` varchar(50) NOT NULL
+  `title` varchar(50) NOT NULL,
+  `reg_time` varchar(50) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
