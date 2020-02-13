@@ -21,6 +21,10 @@ a:link {
     text-decoration: none;
 }
 
+li a {
+    color:#aaa;
+}
+
 a:hover {
     color: aquamarine;
 }
