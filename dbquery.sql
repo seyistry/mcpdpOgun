@@ -24,6 +24,23 @@ USE `myregdb`;
 -- Table structure for table `register`
 --
 
+DROP TABLE IF EXISTS `register`;
+CREATE TABLE IF NOT EXISTS `register` (
+  `email` varchar(150) NOT NULL,
+  `exp_date` date NOT NULL,
+  `fullname` varchar(150) NOT NULL,
+  `hospital` varchar(150) NOT NULL,
+  `marital_status` varchar(8) NOT NULL,
+  `mobile_no` varchar(14) NOT NULL,
+  `practice_licence` varchar(100) NOT NULL,
+  `program` varchar(100) NOT NULL,
+  `sex` varchar(8) NOT NULL,
+  `speciality` varchar(150) NOT NULL,
+  `teller_no` varchar(100) NOT NULL,
+  `title` varchar(50) NOT NULL,
+  `reg_time` varchar(50) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
 DROP TABLE IF EXISTS `feb`;
 CREATE TABLE IF NOT EXISTS `feb` (
   `email` varchar(150) NOT NULL,
