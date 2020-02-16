@@ -1,8 +1,11 @@
 <?php
 if (isset($_POST["submit"])) {
     include_once 'connect.php';
+    include_once "printAfterReg.php";
+
     // return print(json_encode($_POST));
 
+    // return print(json_encode($_POST));
     $email = $_POST['email'];
     $exp_date = $_POST['exp_date'];
     $fullname = $_POST['fullname'];
@@ -21,7 +24,7 @@ if (isset($_POST["submit"])) {
     
     $db = $database->openConnection();
     $sql_check = "select email, exp_date, fullname, hospital, marital_status, mobile_no, practice_licence, program, sex, speciality, teller_no, title, reg_time
-                 from $program where email='$email'";
+                 from `register` where practice_licence='$practice_licence' AND program = '$program'";
     
     $record = $db->query($sql_check);
     $result = $record->fetchAll();
@@ -29,23 +32,18 @@ if (isset($_POST["submit"])) {
     // return print(json_encode($result));
 
     if (empty($result)) {
-        $sql = "insert into $program (email, exp_date, fullname, hospital, marital_status, mobile_no, practice_licence, program, sex, speciality, teller_no, title, reg_time)
-             values('$email','$exp_date','$fullname','$hospital','$marital_status','$mobile_no','$practice_licence','$program','$sex','$speciality','$teller_no','$title','$date')";
-        $db->exec($sql);
         $sql = "insert into `register` (email, exp_date, fullname, hospital, marital_status, mobile_no, practice_licence, program, sex, speciality, teller_no, title, reg_time)
         values('$email','$exp_date','$fullname','$hospital','$marital_status','$mobile_no','$practice_licence','$program','$sex','$speciality','$teller_no','$title','$date')";
         $db->exec($sql);
         
         $database->closeConnection();
-
-        include_once "printAfterReg.php";
+        print("You have registered successfully.");
         $printAfterReg= new printAfterReg();
         $printAfterReg::fetchAndPrint($email);
         return;
 
-        return print("You have registered successfully.");
     } else {
-        return print("Email already in use.");
+        return print("User Already Registered for this Program.");
     }
 }
 ?>
