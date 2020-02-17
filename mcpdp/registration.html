@@ -37,7 +37,13 @@
         <div id="hr-top"></div>
         <nav class="navbar navbar-expand-lg navbar-light ">
             <div class="container">
-                <a class="navbar-brand" href="index.html" id="logo"><img src="./img/favicon.png" id="logo-img" alt="logo">MCPDPOG</a>
+                <a class="navbar-brand" href="index.html" id="logo"
+                    ><img
+                        src="./img/favicon.png"
+                        id="logo-img"
+                        alt="logo"
+                    />MCPDPOG</a
+                >
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -171,6 +177,37 @@
                                 centered Learning (SCL)
                             </option>
                         </select>
+                        <div id="myModal" class="modal fade">
+                            <div  class="modal-dialog" id role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">No. of seat left</h5>
+                                        <button
+                                            type="button"
+                                            class="close"
+                                            data-dismiss="modal"
+                                            aria-label="Close"
+                                        >
+                                            <span aria-hidden="true"
+                                                >&times;</span
+                                            >
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h2 class='text-center' id="seatLeft"></h2>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button
+                                            type="button"
+                                            class="btn btn-secondary"
+                                            data-dismiss="modal"
+                                        >
+                                            Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group">
@@ -360,5 +397,30 @@
         <script src="js/bootstrap.js"></script>
         <script src="js/typewriter.js"></script>
         <script src="./js/main.js"></script>
+        <script>
+            $(document).ready(function(){
+                
+            });
+        </script>
+        <script>
+            $(document).ready(function() {
+                $("#program").change(function() {
+                    //Selected value
+                    var inputValue = $(this).val();
+                    
+                    // Ajax for calling php function
+                    $.post(
+                        "program.php",
+                        { dropdownValue: inputValue },
+                        function(data) {
+                            // alert("Number of seat left " + data);
+                            $( "#seatLeft" ).html( data );
+                            $("#myModal").modal("show");
+                            //do after submission operation in DOM
+                        }
+                    );
+                });
+            });
+        </script>
     </body>
 </html>

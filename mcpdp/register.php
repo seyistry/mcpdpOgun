@@ -37,13 +37,17 @@ if (isset($_POST["submit"])) {
         $db->exec($sql);
         
         $database->closeConnection();
-        print("You have registered successfully.");
+        print('<script>window.alert("You have registered successfully.")</script>');
         $printAfterReg= new printAfterReg();
         $printAfterReg::fetchAndPrint($email);
         return;
 
     } else {
-        return print("User Already Registered for this Program.");
+        print('<script>window.alert("User Already Registered for this Program.")</script>');
+        return print('<a href="./registration.html" style="display:block;text-align: center;margin-top: 10%;">Go back</a>');
     }
+} else {
+    header('Location: registration.html');
+    exit; 
 }
 ?>

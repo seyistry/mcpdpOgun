@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `program` (
   `date` varchar(10) NOT NULL,
   `venue` varchar(10) NOT NULL,
   `module` varchar(150) NOT NULL,
-  `year` varchar(10) NOT NULL
+  `year` date(10) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 DROP TABLE IF EXISTS `register`;
