@@ -397,11 +397,6 @@
         <script src="js/typewriter.js"></script>
         <script src="./js/main.js"></script>
         <script>
-            $(document).ready(function(){
-                
-            });
-        </script>
-        <script>
             $(document).ready(function() {
                 $("#program").change(function() {
                     //Selected value
@@ -413,8 +408,16 @@
                         { dropdownValue: inputValue },
                         function(data) {
                             // alert("Number of seat left " + data);
-                            $( "#seatLeft" ).html( data );
-                            $("#myModal").modal("show");
+                            if ( data < 1) {
+                                $( "#seatLeft" ).html( data );
+                                $("#myModal").modal("show");
+                                document.getElementById("Button").disabled = true;
+                            } else {
+                                $( "#seatLeft" ).html( data );
+                                $("#myModal").modal("show");
+                                document.getElementById("Button").disabled = false;
+                            }
+                            
                             //do after submission operation in DOM
                         }
                     );
