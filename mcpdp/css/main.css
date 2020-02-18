@@ -28,7 +28,7 @@ a:link {
 }
 
 .nav-style {
-    color: #0b5345;
+    color: #14977d;
     display: block;
     padding: 0.5rem 1rem;
     font-weight: 700;
@@ -39,7 +39,7 @@ li a {
 }
 
 a:hover {
-    color: rgba(211, 253, 238, 0.966);
+    color: #0b5345
 }
 
 #logo {
