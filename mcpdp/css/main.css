@@ -34,6 +34,10 @@ a:link {
     font-weight: 700;
 }
 
+.nav-style:hover {
+    border: 1px solid #0b5345;
+}
+
 li a {
     color: #aaa;
 }
@@ -60,6 +64,7 @@ a:hover {
     background-color: #fff;
     padding: 15px 32px;
     color: #12836c;
+    border: ;
 }
 
 #hr-top {
