@@ -87,7 +87,7 @@ a:hover {
     max-width: 100%;
     background-image: url("../img/main-bg.png");
     background-size: cover;
-    background-position: center;
+    background-position: top
     background-repeat: no-repeat;
     height: 500px;
 }
