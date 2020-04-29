@@ -74,13 +74,13 @@
 
 .owl-carousel .owl-dots .owl-dot span {
     background: transparent;
-    border: 1px solid var(--main-black-color);
+    border: 1px solid #fff;
     transition: all 0.2s ease;
 }
 
 .owl-carousel .owl-dots .owl-dot:hover span,
 .owl-carousel .owl-dots .owl-dot.active span {
-    background: var(--main-black-color);
+    background: #39f5cf;
 }
 
 
@@ -137,12 +137,16 @@ a:hover {
 }
 
 #link-a {
-    background-color: #0b5345;
+    background-color: #f83570;
     padding: 15px 32px;
     color: #fff;
     font-weight: bold;
     margin-bottom: 20px;
     border-radius: 150px;
+}
+
+.py-t {
+    padding-top: 1.2rem;
 }
 
 #link-a:hover {
@@ -191,29 +195,71 @@ pad-mar {
     height: 100%;
 }
 
+.toast {
+    left: 50%;
+    transform: translate(-50%, 0px);
+    z-index: 9999;
+}
+
+
+
+.toast-header {
+    background-color: #fc5a5a;
+    color: #fff;
+    width: 350px;
+}
+
+.toast {
+    /* max-width: 350px; */
+}
+
+.toast-header button {
+    color: #fff;
+}
+
+.toast-body {
+    background-color: #fff;
+    color: #333;
+}
+
 .header-msg {
     text-align: center;
     color: #fff;
 }
 
 #about-bg {
-    background: #0b5345;
+    background-image: url("../img/main-bg1.jpg");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
 }
 
 #program-bg {
-    background: #0b5345;
+    background-image: url("../img/program.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #registration-bg {
-    background: #0b5345;
+    background-image: url("../img/register.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #procedure-bg {
-    background: #0b5345;
+    background-image: url("../img/procedure.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #contact-bg {
-    background: #0b5345;
+    background-image: url("../img/contact.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
 }
 
 .others-hero {
@@ -248,7 +294,7 @@ pad-mar {
     max-width: 100%;
     background-color: #0b5345;
     background-size: 100%;
-    color: #fff;
+    color: #eee;
     padding-bottom: 5rem;
     /* height: 300px; */
 }
@@ -305,7 +351,7 @@ From photo start
 
 .item {
     position: relative;
-    background: #0b5345;
+    background: #05aa89;
     overflow: hidden;
 }
 .item::after {

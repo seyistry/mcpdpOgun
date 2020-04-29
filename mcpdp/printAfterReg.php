@@ -1,15 +1,15 @@
 <?php
 
 class printAfterReg{
-    public static function fetchAndPrint($email){
+    public static function fetchAndPrint($practice_licence){
             include_once 'connect.php';
             // return print($email);
 
             $database = new connect();
 
             $db = $database->openConnection();
-            $sql_check = "select email, exp_date, fullname, hospital, marital_status, mobile_no, practice_licence, program, sex, speciality, teller_no, title
-                        from `register` where email='$email'";
+            $sql_check = "select email, exp_date, fullname, hospital, marital_status, mobile_no, practice_licence, program, sex, speciality, teller_no, title, reg_num
+                        from `register` where practice_licence='$practice_licence'";
 
             $record = $db->query($sql_check);
             $result = $record->fetchAll();
@@ -87,10 +87,15 @@ class printAfterReg{
                                     <td> Teller No: </td>
                                     <td>' . $result[0]['teller_no'] . '</td>
                                 </tr>
+                                <tr style="font-weight:bold;padding:100px 0">
+                                    <td> Registration No : </td>
+                                    <td>' . $result[0]['reg_num'] . '</td>
+                                </tr>
                             </table>
                             <div style="text-align: center;">
                                 <!-- insert your custom barcode setting your data in the GET parameter "data" -->
-                                <img alt="barcode" src="./img/barcode.svg"/>
+                                <img alt="barcode" src="./img/barcode.svg" height="150"
+                                width="150"/>
                             </div>
                         </div>
                         <div class="container">
