@@ -32,14 +32,23 @@ if (isset($_POST["submit"])) {
     // return print(json_encode($result));
 
     if (empty($result)) {
-        $sql = "insert into `register` (email, exp_date, fullname, hospital, marital_status, mobile_no, practice_licence, program, sex, speciality, teller_no, title, reg_time)
-        values('$email','$exp_date','$fullname','$hospital','$marital_status','$mobile_no','$practice_licence','$program','$sex','$speciality','$teller_no','$title','$date')";
+        $sql_check = "select count(*) as total from `register` where program = '$program'";
+
+        $record = $db->query($sql_check);
+        $result = $record->fetchAll();
+        $reg_num = $result[0]['total'];
+        $reg_num = $reg_num + 1;
+        $reg_num = strval(sprintf("%03d", $reg_num));
+        $reg_num = 'MCPDP/OG/'.$reg_num;
+        
+        $sql = "insert into `register` (email, exp_date, fullname, hospital, marital_status, mobile_no, practice_licence, program, sex, speciality, teller_no, title, reg_time, reg_num)
+        values('$email','$exp_date','$fullname','$hospital','$marital_status','$mobile_no','$practice_licence','$program','$sex','$speciality','$teller_no','$title','$date', '$reg_num')";
         $db->exec($sql);
         
         $database->closeConnection();
         print('<script>window.alert("You have registered successfully.")</script>');
         $printAfterReg= new printAfterReg();
-        $printAfterReg::fetchAndPrint($email);
+        $printAfterReg::fetchAndPrint($practice_licence);
         return;
 
     } else {

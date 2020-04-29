@@ -28,7 +28,7 @@
 
     <body>
         <div id="hr-top"></div>
-        <nav class="navbar navbar-expand-lg navbar-light ">
+        <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <a class="navbar-brand" href="index.html" id="logo"
                     ><img
@@ -110,10 +110,12 @@
                 register for a program once.
             </h6>
             <form action="register.php" method="POST" style="max-width: 600px;">
-                <label class="reg-form" for="Teller">Teller #:</label>
+                <label class="reg-form" for="Teller"
+                    >Teller # or <i> Bank Transfer Ref Number</i>:</label
+                >
                 <input
                     type="text"
-                    class="form-control form-control-sm "
+                    class="form-control form-control-sm"
                     name="teller_no"
                     id="teller"
                 />
@@ -126,50 +128,51 @@
                             id="program"
                         >
                             <option value=""></option>
-                            <option value="102"
-                                >February 17-21 Abeokuta - (EMONC), (RMC) and
-                                (OFP)
-                                <span class="badge badge-light"
-                                    >tester</span
-                                ></option
-                            >
-                            <option value="103"
-                                >March 16 – 20 Abeokuta - Med-Surg 1/student
-                                centered learning (SCL)</option
-                            >
-                            <option value="104"
-                                >April 20 – 24 Abeokuta - Psychiatry 1</option
-                            >
-                            <option value="105"
+                            <option value="A105"
                                 >May 18 – 22 Sagamu - Adolescent & sexual
                                 Reproduction Health and Youth friendly
                                 Services</option
                             >
-                            <option value="106"
-                                >June 15 – 19 Abeokuta - Med-Surg 1/
-                                (SCL)</option
+                            <option value="A106"
+                                >June 15 – 19 Abeokuta - Med-Surg 1
+                            </option>
+                            <option value="B106"
+                                >June 15 – 19 Abeokuta - Student centered
+                                Learning (SCL)</option
                             >
-                            <option value="107"
-                                >July 20 – 24 Abeokuta - Midwifery 1/ Maternal
+                            <option value="A107"
+                                >July 20 – 24 Abeokuta - Midwifery 1</option
+                            >
+                            <option value="B107"
+                                >July 20 – 24 Abeokuta - Maternal
                                 Nutrition</option
                             >
-                            <option value="108"
-                                >Aug 17 – 21 Abeokuta - (CTU), (LARC)</option
+                            <option value="A108"
+                                >Aug 17 – 21 Abeokuta - Contraceptive Technology
+                                Update (CTU)</option
                             >
-                            <option value="109"
+                            <option value="B108"
+                                >Aug 17 – 21 Abeokuta - Long Active Reversible
+                                Contraceptives (LARC)</option
+                            >
+                            <option value="A109"
                                 >Sept 21 -25 Sagamu - Clinical Management of
                                 Rape</option
                             >
-                            <option value="110"
+                            <option value="A110"
                                 >October 19 – 23 Abeokuta - Public Health Module
                                 2</option
                             >
-                            <option value="111"
-                                >Nov 16 – 20 Abeokuta - (EMONC)
+                            <option value="A111"
+                                >Nov 16 – 20 Abeokuta - Elimination of Maternal
+                                to Child Transmission of HIV (e-MTCT)
                             </option>
-                            <option value="112"
-                                >Dec 14 – 18 Abeokuta - Psychiatry 2 / Student
-                                centered Learning (SCL)
+                            <option value="A112"
+                                >Dec 14 – 18 Abeokuta - Psychiatry 2
+                            </option>
+                            <option value="B112"
+                                >Dec 14 – 18 Abeokuta - Student centered
+                                Learning (SCL)
                             </option>
                         </select>
                         <div id="myModal" class="modal fade">
@@ -315,11 +318,15 @@
                     id="exp"
                     name="exp_date"
                 />
+                <b style="color: red; display: block; margin-top: 0.5rem;"
+                    >Note: You must obtain a print out after submission of this
+                    form
+                </b>
                 <button
                     type="submit"
                     class="btn-submit"
                     id="submit"
-                    style="margin-top: 1rem; margin-bottom: 2.5rem;"
+                    style="margin-top: 0.5rem; margin-bottom: 2.5rem;"
                     name="submit"
                 >
                     Submit
@@ -330,7 +337,7 @@
         <footer>
             <div class="container">
                 <div class="row mb-5" style="padding-top: 3rem; color: #ddd;">
-                    <div class="col-md-2 ">
+                    <div class="col-md-2">
                         <p class="">Our Contact</p>
                         <address class="font-weight-lighter footer-base">
                             Department of Nursing Services,<br />
@@ -341,7 +348,7 @@
                     </div>
                     <div class="col-md-2">
                         <p class="mt-0">Quick Links</p>
-                        <ul class="footer-base" style="color: azure;">
+                        <ul class="footer-base">
                             <li><a href="./program.html">Programmes</a></li>
                             <li><a href="./about.html">About Us</a></li>
                             <li><a href="./procedure.html">Procedure</a></li>
@@ -354,12 +361,11 @@
                     <div class="col-md-5">
                         <p class="">Nurse Plegde</p>
                         <p class="font-weight-lighter text-justify footer-base">
-                            In the full knowledge of the obligation I am
-                            undertaking. I promise to care for the sick with all
-                            the skill and understanding I possess, without
-                            regard to race, creed, colour, politics or social
-                            status, sparing no effort to conserve life, to
-                            alleviate suffering and promote health.
+                            I solemnly pledge before God and in the presence of
+                            this Assembly, to pass my life in purity and to
+                            practice my profession faithfully I will abstain
+                            from whatever is deleterious or mischievous and will
+                            not take or knowingly administer any harmful drug.
                         </p>
                     </div>
                     <div class="col-md-3">
@@ -371,18 +377,21 @@
                     </div>
                 </div>
             </div>
-            <div style=" background-color: black;">
+            <div style="background-color: black;">
                 <div class="container text-center footer mt-auto py-3">
                     <small
-                        class="font-weight-lighter footer-base text-muted "
-                        style="font-size:smaller;"
+                        class="font-weight-lighter footer-base text-muted"
+                        style="font-size: smaller;"
                     >
                         &copy; Ogun State MCPDP
                         <script>
                             document.write(new Date().getFullYear());
                         </script>
                         All right reserved. | Developed by
-                        <a id="dev-link" href="tel://+2347034490363"
+                        <a
+                            id="dev-link"
+                            href="https://seyistry.github.io/"
+                            target="_blank"
                             >Seyi Alexander.
                         </a>
                     </small>
@@ -405,8 +414,8 @@
         <script src="js/typewriter.js"></script>
         <script src="./js/main.js"></script>
         <script>
-            $(document).ready(function() {
-                $("#program").change(function() {
+            $(document).ready(function () {
+                $("#program").change(function () {
                     //Selected value
                     var inputValue = $(this).val();
 
@@ -414,7 +423,7 @@
                     $.post(
                         "program.php",
                         { dropdownValue: inputValue },
-                        function(data) {
+                        function (data) {
                             // alert("Number of seat left " + data);
                             if (data < 1) {
                                 $("#seatLeft").html(data);
